@@ -5,6 +5,6 @@ var photoSchema = mongoose.Schema({
     image: {}
 });
 
-var Photo = mongoose.model('Phto', photoSchema);
+var Photo = mongoose.model('Photo', photoSchema);
 
 module.exports = Photo;
