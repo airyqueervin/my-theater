@@ -2,15 +2,16 @@
 
 // Register `movieList` component, along with its associated controller and template
 angular.
-  module('myTheaterApp').
+  module('movieList').
   component('movieList', {
-    template:
-        '<ul>' +
-          '<li ng-repeat="movie in $ctrl.movies">' +
-            '<span>{{movie.name}}</span>' +
-            '<p>{{movie.snippet}}</p>' +
-          '</li>' +
-        '</ul>',
+    templateUrl: 'movie-list/movie-list.template.html',
+    // template:
+    //   '<ul>' +
+    //     '<li ng-repeat="movie in $ctrl.movies">' +
+    //       '<span>{{movie.name}}</span>' +
+    //       '<p>{{movie.snippet}}</p>' +
+    //     '</li>' +
+    //   '</ul>',
     controller: function MovieListController() {
     this.movies = [
       {
@@ -22,8 +23,8 @@ angular.
         snippet: 'Always gets it on the first try.'
       },
       {
-        name: 'La-la-land',
-        snippet: 'It won some Oscars.'
+        name: 'Hidden Figures',
+        snippet: 'Fantastic Oscar Worthy!'
       },
       {
         name: 'John Wick 2',
