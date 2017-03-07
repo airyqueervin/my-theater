@@ -22,8 +22,12 @@
 
       <ul class="movies">
         <li ng-repeat="movie in $ctrl.movies | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-          <span>{{movie.name}}</span>
+          <span ng-click="trailer">{{movie.name}}</span>
           <p>{{movie.snippet}}</p>
+
+          <p>
+            <a ng-href="{{movie.url}}">Watch {{movie.name}} Trailer </a>
+          </p>
         </li>
       </ul>
 
