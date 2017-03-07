@@ -1,3 +1,5 @@
 angular.module('myTheaterApp', [
-  'movieList'
+  'movieList',
+  'ngroute',
+  'movieDetail'
 ]);

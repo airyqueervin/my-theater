@@ -20,12 +20,15 @@
     <div class="col-md-10">
       <!--Body content-->
 
-      <ul class="movies">
-        <li ng-repeat="movie in $ctrl.movies | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-          <span>{{movie.name}}</span>
-          <p>{{movie.snippet}}</p>
-        </li>
-      </ul>
+    <ul class="movies">
+      <li ng-repeat="movie in $ctrl.movies | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+        <a href="#/movies/{{movie.id}}" class="thumb">
+          <img ng-src="{{movie.imageUrl}}" alt="{{movie.name}}" />
+        </a>
+        <a href="#/movies/{{movie.id}}">{{movie.name}}</a>
+        <p>{{movie.snippet}}</p>
+      </li>
+    </ul>
 
     </div>
   </div>
