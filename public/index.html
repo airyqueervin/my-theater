@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myTheaterApp">
 <head>
+<!-- <base href="movie-list/movie-list.html"> -->
   <title>My Theater!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -16,13 +17,9 @@
 </head>
 <body>
 
-  <div class="view-animate-container">
-    <div ng-view class="view-animate">
-      <movie-list></movie-list>
+  <div ng-view></div>
 
-    </div>
-  </div>
-
+  <movie-list></movie-list>
 
 </body>
 </html>

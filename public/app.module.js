@@ -2,6 +2,7 @@ var myTheaterApp = angular.module('myTheaterApp', [
   'movieList',
   'ngRoute'
 ])
+.value('$routerRootComponent', 'myTheaterApp')
 .config(['$routeProvider', '$locationProvider',
   function ($routeProvider, $locationProvider) {
   $routeProvider
@@ -9,8 +10,8 @@ var myTheaterApp = angular.module('myTheaterApp', [
       templateUrl: 'movie-list/movie-list.html',
       controller: 'MovieListController'
     })
-    .when('/overview', {
-      templateUrl: 'movie-list/movie-list.html',
+    .when('/movieoverview', {
+      template: '<h1>Home</h1><p>Hello, {{ $ctrl.movies }} !</p>',
       controller: 'MovieListController'
     })
     .otherwise({
